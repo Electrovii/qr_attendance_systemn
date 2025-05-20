@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mark Attendance</h1>
+    <form action="/submit_attendance" method="post">
+        <input type="hidden" name="session_id" value="{{ session_id }}">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required>
+        <br>
+        <label for="student_name">Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
